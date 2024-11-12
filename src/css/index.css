@@ -1,101 +1,76 @@
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh;
-    background: url('../assets/eth5.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-  
-  .container {
-    width: 750px;
-    max-width: 900px;
-    background-color: rgba(0, 0, 0, 0.650);
-    padding: 40px;
-    padding-bottom: 2%;
-    padding-top: 2%;
-    border-radius: 5px;
-    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 30px;
-  }
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #222831; /* Dark gray background */
+  color: #EEEEEE; /* Light gray text for high contrast */
+}
 
-  h2 {
-    font-size: 25px;
-    color: #ffffff;
-    margin-bottom: 25px;
-  }
-  
-  h3 {
-    color: #ffffff;
-  }
+/* Centering text and improving alignment */
+.text-center {
+  text-align: center;
+}
 
-  p {
-    color: #ffffff;
+/* Header Styles */
+#head h1, #head h2, #head h3 {
+  margin: 10px 0;
+}
+
+/* Container for voting and candidate information */
+.container {
+  width: 80%;
+  max-width: 800px;
+  background-color: #393E46; /* Lighter gray for containers */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 12px;
+  border-bottom: 1px solid #00ADB5; /* Teal color for subtle accents */
+}
+
+/* Button Styling */
+.btn {
+  padding: 10px 20px;
+  background-color: #00ADB5; /* Vibrant teal for buttons */
+  color: #222831; /* Dark gray text */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #EEEEEE; /* Light gray on hover */
+  color: #393E46; /* Text color change on hover */
+}
+
+/* Account address display */
+#account {
+  padding: 10px;
+  margin-top: 20px;
+  color: #00ADB5; /* Teal color to highlight important info */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .container, .table {
+      width: 95%;
   }
-  
-  .table {
-    width: 100%;
-    margin-bottom: 20px;
-    background-color: rgba(124, 123, 123, 0.65);
-    border-radius: 5px;
-    border-collapse: separate;
-    border-spacing: 25px;
-  }
-  
-  th {
-    font-size: 18px;
-    color: #ffffff;
-  }
-  
-  td {
-    font-size: 16px;
-    color: #ffffff;
-    row-gap: 100%;
-  }
-  
-  #voteButton {
-    width: 40%;
-    padding: 12px;
-    background-color: #198a7b;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 19px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #voteButton:hover {
-    background-color: #44afa1;
-  }
-  
-  #voteButton:focus {
-    outline: none;
-  }
-  
-  #voteButton:active {
-    transform: translateY(2px);
-  }
-  
-  #accountAddress {
-    font-size: 18px;
-    color: #ffffff;
-    margin-top: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      width: 90%;
-    }
-  }
-  
+}

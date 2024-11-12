@@ -1,46 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin portal</title>
-
+    <title>Admin Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
-    
+    <style>
+      body {
+        font-family: 'Lato', sans-serif;
+        background-color: #f4f6f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #222831;
+      }
+      #head {
+        background-color: #343a40;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+      }
+      #head h1 {
+        color: azure;
+        font-size: 2.5em;
+        margin: 0;
+      }
+      .container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px;
+        width: 80%;
+        max-width: 600px;
+      }
+      .container legend {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #495057;
+      }
+      .table {
+        width: 100%;
+        margin: 0;
+        border-spacing: 0;
+      }
+      .table th, .table td {
+        padding: 10px;
+        text-align: left;
+        vertical-align: middle;
+        font-size: 1em;
+      }
+      .table th {
+        color: #495057;
+        font-weight: 700;
+      }
+      .table td input {
+        width: 90%;
+        padding: 8px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 1em;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+      p {
+        font-size: 0.9em;
+        color: #888;
+      }
+    </style>
   </head>
   <body>
-    <div id="head" class="text-center">
-      <h1 align="center" style="color: azure;">Decentralized Voting Using Ethereum Blockchain</h1>
-      <br/> 
+    <div id="head">
+      <h1>Voting Using Ethereum</h1>
     </div>
 
     <div class="container">
-     <legend>Add Candidate</legend>  
-     <table  class="table text-center"> 
-              <tr>
-                <th>Name </th><td>  <input id="name" type="text" name="name" placeholder ="Candidates name" autocomplete="off"></td>  
-                <th>Party</th><td><input id="party" type="text" name="party" placeholder ="Candidates party"></td> 
-              </tr>
+      <legend>Add Candidate</legend>  
+      <table class="table"> 
+        <tr>
+          <th>Name</th>
+          <td><input id="name" type="text" name="name" placeholder="Candidate's name" autocomplete="off"></td>  
+        </tr>
+        <tr>
+          <th>Party</th>
+          <td><input id="party" type="text" name="party" placeholder="Candidate's party"></td>
+        </tr>
       </table> 
       <input id="addCandidate" type="submit" name="submit" value="Add Candidate">
       <p id="Aday"></p>
     </div>
 
     <div class="container">
-     <legend>Define Voting Dates</legend>  
-     <table  class="table text-center"> 
-              <tr>              
-                <th>Start date</th><td><input id="startDate" type="date" name=""></td>
-                <th>End date</th><td>    <input id="endDate" type="date" name="" ></td>
-              </tr>
+      <legend>Define Voting Dates</legend>  
+      <table class="table"> 
+        <tr>
+          <th>Start Date</th>
+          <td><input id="startDate" type="date" name=""></td>
+        </tr>
+        <tr>
+          <th>End Date</th>
+          <td><input id="endDate" type="date" name=""></td>
+        </tr>
       </table> 
       <input id="addDate" type="submit" name="submit" value="Define Dates">
       <p id="Aday"></p>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="../dist/app.bundle.js" type="module"></script>
+    <script src="../dist/app.bundle.js" type="module"></script>
   </body>
 </html>
